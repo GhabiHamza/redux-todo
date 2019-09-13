@@ -1,11 +1,17 @@
-import React from 'react';
+import React,{Component} from 'react';
 import { InputGroup, InputGroupAddon, InputGroupText, Input } from 'reactstrap';
 import {connect} from 'react-redux';
 
 
 
-const TodoItem=({item,id,onDelete,onEdit,onThrough})=>{
-    return(
+class TodoItem extends Component{
+
+
+    
+    render(){
+
+        const {item,id,onDelete,onEdit,onThrough} = this.props
+        return(
         <div className='item-todo'>
            
            <InputGroup>
@@ -22,6 +28,7 @@ const TodoItem=({item,id,onDelete,onEdit,onThrough})=>{
         </div>
 
     )
+}
 }
 const mapDispatchToProps=dispatch=>{
     return{

@@ -25,7 +25,7 @@ const TodoReducer=(state=tabtodo,action)=>{
         
     }
     if(action.type==='THROUGHITEM'){
-        return state.map((el,index)=>index==action.id?{titre:el.titre, test:!el.test}:el)
+        return state.map((el,index)=>index===action.id?{titre:el.titre, test:!el.test}:el)
     }
     return state
 }
